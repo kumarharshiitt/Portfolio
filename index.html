@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harsh Kumar | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <div class="nav-logo">HK</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="theme-icon">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Glow cursor (dark mode only) -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">Greetings, I'm</p>
+      <h1 class="hero-name" id="heroName"></h1>
+      <p class="hero-tagline typed" id="typed"></p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+        <a href="resume.pdf" target="_blank" class="btn btn-cv">
+          <i class="fas fa-file-pdf"></i> Download CV
+        </a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://linkedin.com/in/harshkumar2424" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/kumarharshiitt" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="mailto:kumarharshkum543@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="hero-blob"></div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-grid">
+
+      <!-- Avatar + floating badges -->
+      <div class="about-avatar-wrap">
+        <div class="avatar-ring">
+          <div class="avatar-placeholder"><i class="fas fa-user"></i></div>
+        </div>
+        <span class="float-badge badge-1"><i class="fas fa-shield-alt"></i> Security</span>
+        <span class="float-badge badge-2"><i class="fas fa-code"></i> Dev</span>
+        <span class="float-badge badge-3"><i class="fas fa-brain"></i> Problem Solver</span>
+      </div>
+
+      <!-- Text + tabs -->
+      <div class="about-text">
+        <p>I'm a <strong>Computer Science & Engineering</strong> student at Lovely Professional University, passionate about cybersecurity, web development, and problem-solving.</p>
+        <p>I have hands-on experience in ethical hacking, penetration testing, and building responsive web apps. I love turning ideas into real digital products.</p>
+
+        <!-- Tab switcher -->
+        <div class="about-tabs">
+          <button class="tab-btn active" data-tab="info">Info</button>
+          <button class="tab-btn" data-tab="education">Education</button>
+          <button class="tab-btn" data-tab="stats">Stats</button>
+        </div>
+
+        <div class="tab-content active" id="tab-info">
+          <div class="about-info">
+            <div><i class="fas fa-graduation-cap"></i> B.Tech CSE — LPU (Aug 2023 – Present)</div>
+            <div><i class="fas fa-map-marker-alt"></i> Phagwara, Punjab</div>
+            <div><i class="fas fa-phone"></i> +91 9065280777</div>
+            <div><i class="fas fa-trophy"></i> JEE Mains — 85 Percentile (2022)</div>
+            <div><i class="fas fa-heart"></i> Interests: Cybersecurity, CTFs, Web Dev</div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-education">
+          <div class="edu-list">
+            <div class="edu-item">
+              <span class="edu-year">2023 – Present</span>
+              <div>
+                <strong>B.Tech — Computer Science & Engineering</strong>
+                <p>Lovely Professional University, Phagwara · CGPA: 5.44</p>
+              </div>
+            </div>
+            <div class="edu-item">
+              <span class="edu-year">2021 – 2022</span>
+              <div>
+                <strong>Intermediate (PCM)</strong>
+                <p>Public School Bela, Darbhanga · 79%</p>
+              </div>
+            </div>
+            <div class="edu-item">
+              <span class="edu-year">2019 – 2020</span>
+              <div>
+                <strong>Matriculation</strong>
+                <p>Rose Public School, Darbhanga · 75%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-stats">
+          <div class="stat-bars">
+            <div class="stat-row">
+              <span>Web Development</span>
+              <div class="bar-track"><div class="bar-fill" data-w="75"></div></div>
+              <span class="bar-pct">75%</span>
+            </div>
+            <div class="stat-row">
+              <span>Cybersecurity</span>
+              <div class="bar-track"><div class="bar-fill" data-w="70"></div></div>
+              <span class="bar-pct">70%</span>
+            </div>
+            <div class="stat-row">
+              <span>C++ / DSA</span>
+              <div class="bar-track"><div class="bar-fill" data-w="65"></div></div>
+              <span class="bar-pct">65%</span>
+            </div>
+            <div class="stat-row">
+              <span>Python</span>
+              <div class="bar-track"><div class="bar-fill" data-w="60"></div></div>
+              <span class="bar-pct">60%</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <i class="fas fa-code"></i>
+        <h3>Languages</h3>
+        <div class="tags">
+          <span>C++</span><span>Python</span><span>C</span><span>Java</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-tools"></i>
+        <h3>Tools & Platforms</h3>
+        <div class="tags">
+          <span>Windows 10/11</span><span>Windows Server 12</span><span>Linux</span><span>Ubuntu</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Cybersecurity</h3>
+        <div class="tags">
+          <span>Penetration Testing</span><span>SQL Injection</span><span>OSINT</span><span>Social Engineering</span><span>Steganography</span><span>Keylogger</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <i class="fas fa-brain"></i>
+        <h3>Soft Skills</h3>
+        <div class="tags">
+          <span>Problem-Solving</span><span>Project Management</span><span>Adaptability</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h2 class="section-title">Training</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">Jun 2025 – Jul 2025</span>
+          <h3>Ethical Hacking</h3>
+          <h4>Lovely Professional University</h4>
+          <ul>
+            <li>Performed MAC Spoofing, Keylogger, Steganography, Batch Scripting, OSINT Framework, Google Hacking Database, Social Engineering, Malware Attacks, SQL Injection Attacks.</li>
+            <li>Developed a clear understanding of how these types of attacks can be dangerous.</li>
+            <li>Developed foundational skills in Linux, networking and ethical hacking methodologies to identify and report security vulnerabilities responsibly.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-icon"><i class="fas fa-water"></i></div>
+        <h3>Flood Information Website</h3>
+        <p>A responsive online flood information website built from scratch. Designed an engaging UI with HTML & CSS, implementing responsive design for desktops, tablets, and smartphones.</p>
+        <div class="tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/kumarharshiitt" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-icon"><i class="fas fa-paw"></i></div>
+        <h3>Virtual Zoo Website</h3>
+        <p>An interactive web app showcasing animals with engaging visuals, dynamic navigation, and responsive layouts. Features image galleries, animal info cards, search/filter options, and JavaScript DOM manipulation for dynamic content updates.</p>
+        <div class="tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/kumarharshiitt" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates">
+    <h2 class="section-title">Certificates</h2>
+    <div class="cert-grid">
+      <div class="cert-card" onclick="openCert('Certificate/1-9ceb8080-8e27-4795-a403-8f5b479ee6ac.pdf.png')" role="button" tabindex="0" aria-label="View TCP/IP certificate">
+        <i class="fas fa-certificate"></i>
+        <h3>TCP/IP and Advanced Topics</h3>
+        <p>University of Colorado</p>
+        <span class="cert-date">Sep 2024</span>
+        <span class="cert-view"><i class="fas fa-eye"></i> View</span>
+      </div>
+      <div class="cert-card" onclick="openCert('Certificate/LIVE MOOC CERTIFICATE.png')" role="button" tabindex="0" aria-label="View Social Networks certificate">
+        <i class="fas fa-certificate"></i>
+        <h3>Social Networks</h3>
+        <p>NPTEL</p>
+        <span class="cert-date">May 2025</span>
+        <span class="cert-view"><i class="fas fa-eye"></i> View</span>
+      </div>
+      <div class="cert-card" onclick="openCert('Certificate/free codecamp.pdf')" role="button" tabindex="0" aria-label="View Responsive Web Design certificate">
+        <i class="fas fa-certificate"></i>
+        <h3>Responsive Web Design</h3>
+        <p>freeCodeCamp</p>
+        <span class="cert-date">Nov 2023</span>
+        <span class="cert-view"><i class="fas fa-eye"></i> View</span>
+      </div>
+      <div class="cert-card" onclick="openCert('Certificate/Cloud Computing.pdf')" role="button" tabindex="0" aria-label="View Cloud Computing certificate">
+        <i class="fas fa-certificate"></i>
+        <h3>Cloud Computing</h3>
+        <p>Google</p>
+        <span class="cert-date">Sep 2024</span>
+        <span class="cert-view"><i class="fas fa-eye"></i> View</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:kumarharshkum543@gmail.com">kumarharshkum543@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <a href="tel:+919065280777">+91 9065280777</a>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-linkedin"></i>
+          <a href="https://linkedin.com/in/harshkumar2424" target="_blank">linkedin.com/in/harshkumar2424</a>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/kumarharshiitt" target="_blank">github.com/kumarharshiitt</a>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p class="form-msg" id="formMsg"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Designed & Built by <span>Harsh Kumar</span> &copy; 2025</p>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
